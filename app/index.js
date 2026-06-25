@@ -5,7 +5,6 @@ import * as messaging from "messaging";
 import * as stats from "./simple/stats";
 import * as sensors from "./simple/sensors";
 import * as clock from "./simple/clock";
-import * as misc from "./simple/misc";
 
 import {FitFont} from "./fitfont";
 

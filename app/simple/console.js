@@ -1,5 +1,3 @@
-import document from "document";
-
 import { gettext } from "i18n";
 
 import * as sensors from "./sensors";
@@ -10,10 +8,9 @@ import { locale } from "user-settings";
 
 //import { memory } from "system";
 
-if(locale.language === 'ru-ru')
-  const c = new FitFont({id:'c', font:'Oswald_16'});
-else
-  const c = new FitFont({id:'c', font:'Monofonto_16'});
+const c = locale.language === "ru-ru"
+  ? new FitFont({ id: "c", font: "Oswald_16" })
+  : new FitFont({ id: "c", font: "Monofonto_16" });
 
 
 let i = 0;

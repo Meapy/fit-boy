@@ -1,5 +1,3 @@
-import document from "document";
-
 import { gettext } from "i18n";
 
 import clock from "clock";
@@ -76,11 +74,9 @@ export function init() {
 
 function updateDate(today, previousDayNumber) {
   const dayNames = [gettext("su"), gettext("mo"), gettext("tu"), gettext("we"), gettext("th"), gettext("fr"), gettext("sa")];
-  
-  if(locale.language === 'ru-ru')
-    const dateLbl = new FitFont({id:'d', font:'Oswald_16'});
-  else
-    const dateLbl = new FitFont({id:'d', font:'Monofonto_16'});
+  const dateLbl = locale.language === "ru-ru"
+    ? new FitFont({ id: "d", font: "Oswald_16" })
+    : new FitFont({ id: "d", font: "Monofonto_16" });
 
   let dayNumber = today.getDay();
   let dayOfWeek = dayNames[dayNumber];

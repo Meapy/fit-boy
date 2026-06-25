@@ -11,8 +11,8 @@ A clock face for Fitbit Sense, modeled after the legendary Pip-Boy from the Fall
 Welcome... to Vault 663.
 
 ## Target Devices
-- Fitbit Sense
-- Fitbit Versa 3
+- Fitbit Sense 2
+- Fitbit Versa 4
 
 ## Features
 - Vault Boy with limb health bars for the proper Pip-Boy feel
@@ -76,7 +76,10 @@ Welcome... to Vault 663.
 ## Build Through CLI
 
 0. Run `npm install`
+  - Node 22 is supported here by a small `postinstall` patch for Fitbit's old `source-map` dependency.
+  - This repo uses the unofficial Versa 4 / Sense 2 prerelease Fitbit SDK path.
 1. run [Fitbit Simulator](https://simulator-updates.fitbit.com/download/latest/win)
+  - The simulator still targets the older Sense / Versa 3 devices; the unofficial Sense 2 / Versa 4 flow is for final build/install.
 2. Log into CLI `npx fitbit`
   - CLI should now display `fitbit$`
 3. Build and Install  `fitbit$ bi`

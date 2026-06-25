@@ -1,7 +1,7 @@
 {
   "devDependencies": {
-    "@fitbit/sdk": "~6.0.0",
-    "@fitbit/sdk-cli": "~1.7.3"
+    "@fitbit/sdk": "~6.2.0-pre.1",
+    "@fitbit/sdk-cli": "~1.8.0-pre.10"
   },
   "fitbit": {
     "appUUID": "2d38820d-91d8-47a7-947f-0d8a12fa1cbe",
@@ -17,8 +17,8 @@
       "access_location"
     ],
     "buildTargets": [
-      "vulcan",
-      "atlas"
+      "rhea",
+      "hera"
     ],
     "i18n": {
       "en-US": {
@@ -46,6 +46,7 @@
     "defaultLanguage": "en-US"
   },
   "scripts": {
-    "build": "fitbit-build"
+    "build": "fitbit-build",
+    "postinstall": "node scripts/patch-source-map.js"
   }
 }
